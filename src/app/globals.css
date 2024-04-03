@@ -4,65 +4,65 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --background: #f9f9f9; /* Light gray */
+    --foreground: #4a4a4a; /* Dark gray */
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card: #ffffff; /* White */
+    --card-foreground: #4a4a4a; /* Dark gray */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover: #ffffff; /* White */
+    --popover-foreground: #4a4a4a; /* Dark gray */
 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: #ff7f50; /* Coral */
+    --primary-foreground: #ffffff; /* White */
 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+    --secondary: #ffe4b5; /* Moccasin */
+    --secondary-foreground: #4a4a4a; /* Dark gray */
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: #ffe4b5; /* Moccasin */
+    --muted-foreground: #757575; /* Gray */
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: #ffe4b5; /* Moccasin */
+    --accent-foreground: #4a4a4a; /* Dark gray */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: #d9534f; /* Red */
+    --destructive-foreground: #ffffff; /* White */
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: #e0e0e0; /* Light gray */
+    --input: #e0e0e0; /* Light gray */
+    --ring: #4a4a4a; /* Dark gray */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: #0e0e0e; /* Dark gray */
+    --foreground: #ffffff; /* White */
 
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: #0e0e0e; /* Dark gray */
+    --card-foreground: #ffffff; /* White */
 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: #0e0e0e; /* Dark gray */
+    --popover-foreground: #ffffff; /* White */
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: #ffffff; /* White */
+    --primary-foreground: #4a4a4a; /* Dark gray */
 
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: #262626; /* Dark gray */
+    --secondary-foreground: #ffffff; /* White */
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: #262626; /* Dark gray */
+    --muted-foreground: #a8a8a8; /* Light gray */
 
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: #262626; /* Dark gray */
+    --accent-foreground: #ffffff; /* White */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: #9e2a2b; /* Dark red */
+    --destructive-foreground: #ffffff; /* White */
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --border: #262626; /* Dark gray */
+    --input: #262626; /* Dark gray */
+    --ring: #d9d9d9; /* Light gray */
   }
 }
 

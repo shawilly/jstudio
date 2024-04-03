@@ -11,39 +11,42 @@ import {
 const services = [
   {
     service: "Cut and Style",
-    cost: "Contact for details.",
+    cost: "$40",
   },
   {
     service: "Basic Men's Cut",
-    cost: '"',
+    cost: "$30",
   },
   {
     service: "Wash and Blow Dry",
-    cost: '"',
+    cost: "$20",
   },
   {
     service: "Color and Style",
-    cost: '"',
+    cost: "$80",
   },
   {
     service: "Highlights and Foil",
-    cost: '"',
+    cost: "$120",
   },
   {
     service: "Children's Cut",
-    cost: '"',
+    cost: "$25",
   },
   {
     service: "Texture/Wave",
-    cost: '"',
+    cost: "Contact us for details.",
   },
 ];
 
 export const Services = () => {
   return (
-    <div id="services" className="mt-[200px]">
-      <div className="container">
-        <h1 className="text-4xl text-secondary mt-12 w-full">Services</h1>
+    <div className="w-[80%]">
+      <div id="services" className="h-[200px] w-full"></div>
+      <div>
+        <h1 className="text-4xl text-secondary mt-12 w-full align-left">
+          Services
+        </h1>
         <Table className="px-12 m-10 text-secondary">
           <TableCaption>
             Our prices are very competitive. Please speak with one of our
@@ -51,15 +54,15 @@ export const Services = () => {
           </TableCaption>
           <TableHeader>
             <TableRow>
-              <TableHead>Service</TableHead>
-              <TableHead>Cost</TableHead>
+              <TableHead className="font-bold">Service</TableHead>
+              <TableHead className="font-bold">Cost (starting at)</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
-            {services.map((service, index) => (
+            {services.map(({ service, cost }, index) => (
               <TableRow key={index}>
-                <TableCell>{service.service}</TableCell>
-                <TableCell>{service.cost}</TableCell>
+                <TableCell className="font-medium">{service}</TableCell>
+                <TableCell>{cost}</TableCell>
               </TableRow>
             ))}
           </TableBody>

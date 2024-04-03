@@ -34,8 +34,6 @@ const Reviews = () => {
                 shadow-md
                 p-4
                 text-secondary
-                border-2
-                border-primary
                 text-center
                 "
         >
@@ -64,10 +62,10 @@ export const Testimonials = () => {
           <Reviews />
         </div>
         <div className="flex justify-center mt-8">
-          <Button className="text-primary h-[30px] w-[100px]" variant="outline">
-            <FaGoogle className="w-6 h-6" />
+          <Button className="text-primary" variant="outline">
+            <FaGoogle className="w-6 h-6 mr-[2px]" />
             <a href="https://www.google.com/search?sa=X&sca_esv=183f9140eeaab3e5&sca_upv=1&tbm=lcl&q=richmond%20hair%20studio%20reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDMwNzK1NLAwNTcxsTQ2MjY1M9vAyPiKUaYoMzkjNz8vRSEjMbNIobikNCUzX6EotSwztbx4ESteaQDlB1W-WQAAAA&rldimm=16072590857449323566&hl=en-IE&ved=0CAUQ5foLahcKEwjIhsiSiJ2FAxUAAAAAHQAAAAAQBA&biw=1512&bih=858&dpr=2#lkt=LocalPoiReviews&arid=ChdDSUhNMG9nS0VJQ0FnSURKa3ZQWnZRRRAB">
-              Our reviews
+              oogle reviews
             </a>
           </Button>
         </div>

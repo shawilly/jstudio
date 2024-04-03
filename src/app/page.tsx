@@ -1,25 +1,27 @@
-"use client";
 import { About } from "@/components/about";
 import { Hero } from "@/components/hero";
-import { Services } from "@/components/services";
-import { NavBar } from "../components/nav-bar";
-import { Testimonials } from "@/components/testimonials";
+import { LoadingScreen } from "@/components/loading-screen";
 import { Products } from "@/components/products";
+import { Services } from "@/components/services";
+import { Testimonials } from "@/components/testimonials";
+import { Suspense } from "react";
+import { NavBar } from "../components/nav-bar";
+import { NavButton } from "@/components/fancy-nav";
 
 export default function Home() {
   return (
-    <div id="main-app-container">
-      <main
-        id="main-app"
-        className="flex min-h-screen flex-col items-center justify-between p-24 bg-primary"
-      >
+    <main
+      id="main-app"
+      className="flex min-h-screen flex-col items-center justify-between p-24 bg-primary"
+    >
+      <Suspense fallback={<LoadingScreen />}>
         <NavBar />
         <Hero />
         <About />
         <Services />
         <Products />
         <Testimonials />
-      </main>
-    </div>
+      </Suspense>
+    </main>
   );
 }

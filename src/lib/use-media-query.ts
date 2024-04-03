@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export enum STD_SIZE {
   MOBILE = "(max-width: 800px)",
-  TABLET = "(max-width: 1024px)",
+  TABLET = "(max-width: 1150px)",
 }
 
 export const useMediaQuery = (query: STD_SIZE): boolean => {

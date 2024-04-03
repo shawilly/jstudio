@@ -5,7 +5,7 @@ import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-sans", 
 });
 
 export const metadata: Metadata = {

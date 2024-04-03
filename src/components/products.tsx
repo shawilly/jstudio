@@ -7,17 +7,26 @@ type ProductProps = {
   description: string;
   website: string;
   logo: string;
+  height: number;
+  width: number;
 };
 
-const ProductInfo = ({ brand, description, website, logo }: ProductProps) => (
+const ProductInfo = ({
+  brand,
+  description,
+  website,
+  logo,
+  height,
+  width,
+}: ProductProps) => (
   <div className="">
     <div className="">
       <Image
+        className="h-auto w-auto"
         src={logo}
         alt={`${brand} Logo`}
-        layout="responsive"
-        width={200}
-        height={100}
+        height={height}
+        width={width}
       />
     </div>
     <p>{description}</p>
@@ -37,6 +46,8 @@ const JoicoInfo = () => (
     description="Our stylists use Joico professional salon products like shampoos and hair colours for their high quality. We also have the complete line of Joico products available for purchase. Particularly with colored hair, it is important to use high quality, specialty shampoos and conditioners like those from Joico to avoid washing the color out."
     website="http://www.joico.com/joico-products/all/"
     logo={joicoLogo.src}
+    height={25 * 5}
+    width={35 * 5}
   />
 );
 
@@ -46,6 +57,8 @@ const BainDeTerreInfo = () => (
     description="We use Bain de Terre shampoos and conditions that are based on naturally sourced ingredients. We also carry the full line of Bain de Terre products."
     website="https://www.baindeterre.ca/"
     logo={bainDeTerreLogo.src}
+    height={25 * 6}
+    width={35 * 6}
   />
 );
 
