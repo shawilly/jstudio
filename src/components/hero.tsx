@@ -89,7 +89,6 @@ export const Hero = () => {
                     <Icon size={70} />
                   </Link>
                 </motion.button>
-                {/* </motion.button> */}
               </div>
             );
           })}

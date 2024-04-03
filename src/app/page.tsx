@@ -6,7 +6,7 @@ import { Services } from "@/components/services";
 import { Testimonials } from "@/components/testimonials";
 import { Suspense } from "react";
 import { NavBar } from "../components/nav-bar";
-import { NavButton } from "@/components/fancy-nav";
+import { NavButton } from "@/components/nav-button";
 
 export default function Home() {
   return (

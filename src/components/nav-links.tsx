@@ -3,7 +3,7 @@ import { STD_SIZE, useMediaQuery } from "@/lib/use-media-query";
 import Link from "next/link";
 import { JSX, SVGProps, useEffect, useState } from "react";
 import { Button } from "./ui/button";
-import { NavButton } from "./fancy-nav";
+import { NavButton } from "./nav-button";
 
 enum NAV_LINKS {
   ABOUT = "About",
@@ -25,7 +25,7 @@ export const NavLinks = () => {
   const [selected, setSelected] = useState<NAV_LINKS>(NAV_LINKS.NONE);
   const isTablet = useMediaQuery(STD_SIZE.TABLET);
 
-  console.log(isTablet)
+  console.log(isTablet);
 
   const handleSelect = (key: NAV_LINKS) => {
     setSelected(key);
@@ -44,7 +44,9 @@ export const NavLinks = () => {
           onClick={() => handleSelect(NAV_LINKS.NONE)}
         >
           <MountainIcon className="w-8 h-8" />
-          <span className="ml-2 font-bold text-2xl min-w-[260px]">Richmond Hair Studio</span>
+          <span className="ml-2 font-bold text-2xl min-w-[260px]">
+            Richmond Hair Studio
+          </span>
         </Link>
       </div>
       <div className="pl-[20px] hidden md:flex justify-evenly items-center space-x-4 w-[60%]">
