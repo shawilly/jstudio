@@ -25,8 +25,6 @@ export const NavLinks = () => {
   const [selected, setSelected] = useState<NAV_LINKS>(NAV_LINKS.NONE);
   const isTablet = useMediaQuery(STD_SIZE.TABLET);
 
-  console.log(isTablet);
-
   const handleSelect = (key: NAV_LINKS) => {
     setSelected(key);
   };

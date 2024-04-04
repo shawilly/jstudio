@@ -1,38 +1,30 @@
+import Image, { StaticImageData } from "next/image";
 import joicoLogo from "@public/joico-logo.png";
 import bainDeTerreLogo from "@public/bain-de-terre-logo.png";
-import Image from "next/image";
 
 type ProductProps = {
   brand: string;
   description: string;
   website: string;
-  logo: string;
-  height: number;
-  width: number;
+  logo: StaticImageData; // Assuming logo is of type StaticImageData
 };
 
-const ProductInfo = ({
-  brand,
-  description,
-  website,
-  logo,
-  height,
-  width,
-}: ProductProps) => (
-  <div className="">
-    <div className="">
-      <Image
-        className="h-auto w-auto"
-        src={logo}
-        alt={`${brand} Logo`}
-        height={height}
-        width={width}
-      />
+const ProductInfo = ({ brand, description, website, logo }: ProductProps) => (
+  <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center justify-center">
+    <div className="mb-4">
+      <div className="bg-gray-100 rounded-lg p-4">
+        <Image src={logo} alt={`${brand} Logo`} height={125} width={150} />
+      </div>
     </div>
-    <p>{description}</p>
-    <p>
+    <p className="text-center text-gray-800 mb-4">{description}</p>
+    <p className="text-center text-gray-700">
       Explore {brand} products{" "}
-      <a href={website} target="_blank" rel="noopener noreferrer">
+      <a
+        href={website}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-500 hover:underline"
+      >
         here
       </a>
       .
@@ -45,9 +37,7 @@ const JoicoInfo = () => (
     brand="Joico"
     description="Our stylists use Joico professional salon products like shampoos and hair colours for their high quality. We also have the complete line of Joico products available for purchase. Particularly with colored hair, it is important to use high quality, specialty shampoos and conditioners like those from Joico to avoid washing the color out."
     website="http://www.joico.com/joico-products/all/"
-    logo={joicoLogo.src}
-    height={25 * 5}
-    width={35 * 5}
+    logo={joicoLogo}
   />
 );
 
@@ -56,20 +46,20 @@ const BainDeTerreInfo = () => (
     brand="Bain de Terre"
     description="We use Bain de Terre shampoos and conditions that are based on naturally sourced ingredients. We also carry the full line of Bain de Terre products."
     website="https://www.baindeterre.ca/"
-    logo={bainDeTerreLogo.src}
-    height={25 * 6}
-    width={35 * 6}
+    logo={bainDeTerreLogo}
   />
 );
 
 export const Products = () => {
   return (
-    <div id="products" className="mt-[200px]">
+    <section id="products" className="flex justify-center w-full h-screen p-5">
       <div className="container">
         <h1 className="text-4xl text-secondary mt-12 w-full">Products</h1>
-        <JoicoInfo />
-        <BainDeTerreInfo />
+        <div className="flex flex-col space-y-6">
+          <JoicoInfo />
+          <BainDeTerreInfo />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

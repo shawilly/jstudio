@@ -41,33 +41,39 @@ const services = [
 
 export const Services = () => {
   return (
-    <div className="w-[80%]">
-      <div id="services" className="h-[200px] w-full"></div>
-      <div>
-        <h1 className="text-4xl text-secondary mt-12 w-full align-left">
-          Services
-        </h1>
-        <Table className="px-12 m-10 text-secondary">
-          <TableCaption>
-            Our prices are very competitive. Please speak with one of our
-            experts for a quote.
-          </TableCaption>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="font-bold">Service</TableHead>
-              <TableHead className="font-bold">Cost (starting at)</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {services.map(({ service, cost }, index) => (
-              <TableRow key={index}>
-                <TableCell className="font-medium">{service}</TableCell>
-                <TableCell>{cost}</TableCell>
+    <section id="services" className="flex justify-center w-full h-screen p-5">
+      <h1 className="text-4xl text-secondary mt-12 pb-4">Services we offer</h1>
+      <div className="bg-gray-100 w-full">
+        <div className="overflow-x-auto">
+          <Table className="mx-8 mt-4 mb-8">
+            <TableCaption className="text-sm italic text-gray-600">
+              Our prices are very competitive. Please speak with one of our
+              experts for a quote.
+            </TableCaption>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="font-semibold text-secondary">
+                  Service
+                </TableHead>
+                <TableHead className="font-semibold text-secondary">
+                  Cost (starting at)
+                </TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {services.map(({ service, cost }, index) => (
+                <TableRow
+                  key={index}
+                  className={index % 2 === 0 ? "bg-gray-200" : ""}
+                >
+                  <TableCell className="py-2 font-medium">{service}</TableCell>
+                  <TableCell className="py-2">{cost}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

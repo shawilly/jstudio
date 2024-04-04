@@ -20,7 +20,7 @@ const testimonials = new Map<string, { name: string; score: number }>([
 
 const Reviews = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-row items-center">
       {Array.from(testimonials).map(([review, { name, score }], index) => (
         <div
           key={index}
@@ -35,9 +35,12 @@ const Reviews = () => {
                 p-4
                 text-secondary
                 text-center
+                hover:drop-shadow-xl
                 "
         >
-          <p>&quot;{review}&quot;</p>
+          <p>
+            &quot;<i>{review}</i>&quot;
+          </p>
           <p className="mt-4">- {name}</p>
           <div className="flex justify-center">
             {[...Array(score)].map((_, index) => (
@@ -55,12 +58,15 @@ const Reviews = () => {
 
 export const Testimonials = () => {
   return (
-    <div id="testimonials" className="mt-[200px]">
+    <section
+      id="testimonials"
+      className="flex justify-center w-full h-screen p-5"
+    >
       <div className="container">
-        <h1 className="text-4xl text-secondary mt-12 w-full">Testimonials</h1>
-        <div className="flex flex-col items-center">
-          <Reviews />
-        </div>
+        <h1 className="text-4xl text-secondary mt-12 w-full">
+          What people have to say
+        </h1>
+        <Reviews />
         <div className="flex justify-center mt-8">
           <Button className="text-primary" variant="outline">
             <FaGoogle className="w-6 h-6 mr-[2px]" />
@@ -70,6 +76,6 @@ export const Testimonials = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

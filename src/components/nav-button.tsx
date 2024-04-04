@@ -44,7 +44,7 @@ export const NavButton = () => {
       <AnimatePresence>
         {isToggled && (
           <motion.div
-            className="z-50 flex-col-reverse w-[250px] h-[200px] rounded-[16px] bg-gradient-to-t from-black to-slate-800"
+            className="pt-20 z-50 flex-col-reverse w-[250px] h-screen rounded-[16px] bg-gradient-to-t from-black to-slate-800"
             initial="hidden"
             animate={isToggled ? "visible" : "hidden"}
             exit="hidden"
@@ -100,6 +100,7 @@ const NavbarItems = ({
   return (
     <>
       <motion.ul
+        className="pt-12"
         initial="hidden"
         animate="visible"
         exit="hidden"
@@ -113,7 +114,7 @@ const NavbarItems = ({
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setToggle(false)}
-                  className="text-white cursor-pointer text-40 pl-[30%] pt-2"
+                  className="text-white font-bold cursor-pointer text-40 pl-[30%] pt-2"
                 >
                   {label}
                 </motion.button>

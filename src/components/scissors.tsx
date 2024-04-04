@@ -5,14 +5,15 @@ import dynamic from "next/dynamic";
 
 export const Scissors = dynamic(
   () =>
-    Promise.resolve(() => {
+    Promise.resolve(({ className }: { className?: string }) => {
+      const styling = `pb-[22px]${className ? ` ${className}` : ""}`;
       const { View } = useLottie({
         animationData: scissors,
         loop: false,
         autoplay: true,
       });
 
-      return <div className="pb-[22px]">{View}</div>;
+      return <div className={styling}>{View}</div>;
     }),
   { ssr: false }
 );
