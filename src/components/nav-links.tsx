@@ -1,9 +1,8 @@
 "use client";
-import { STD_SIZE, useMediaQuery } from "@/lib/use-media-query";
 import Link from "next/link";
-import { JSX, SVGProps, useEffect, useState } from "react";
-import { Button } from "./ui/button";
+import { JSX, SVGProps, useState } from "react";
 import { NavButton } from "./nav-button";
+import { Button } from "./ui/button";
 
 enum NAV_LINKS {
   ABOUT = "About",
@@ -23,19 +22,15 @@ export const navLinks = new Map<NAV_LINKS, string>([
 
 export const NavLinks = () => {
   const [selected, setSelected] = useState<NAV_LINKS>(NAV_LINKS.NONE);
-  const isTablet = useMediaQuery(STD_SIZE.TABLET);
 
   const handleSelect = (key: NAV_LINKS) => {
     setSelected(key);
   };
 
-  return isTablet ? (
+  return (
     <div className="flex justify-start items-center">
       <NavButton />
-    </div>
-  ) : (
-    <div className="flex justify-start items-center">
-      <div className="pr-1 hover:text-yellow-400">
+      <div className="hidden lg:block pr-1 hover:text-yellow-400">
         <Link
           className="flex pl-[25px]"
           href=""
@@ -47,7 +42,7 @@ export const NavLinks = () => {
           </span>
         </Link>
       </div>
-      <div className="pl-[20px] hidden md:flex justify-evenly items-center space-x-4 w-[60%]">
+      <div className="hidden lg:flex pl-[20px] justify-evenly items-center space-x-4 w-[60%]">
         {Array.from(navLinks).map(([key, href]) => (
           <Link
             key={key}
@@ -61,7 +56,7 @@ export const NavLinks = () => {
           </Link>
         ))}
       </div>
-      <div className="pl-[60px] justify-right h-[50%]">
+      <div className="hidden lg:flex pl-[60px] justify-right h-[50%]">
         <Button
           className="text-primary h-[30px] w-[100px] hover:text-yellow-400"
           variant="outline"

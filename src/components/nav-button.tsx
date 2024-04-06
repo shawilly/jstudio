@@ -29,13 +29,13 @@ export const NavButton = () => {
   };
 
   return (
-    <div className="fixed top-1 left-2">
+    <div className="lg:hidden fixed top-1 left-2">
       <button
         className="w-[40px] h-[40px] rounded-[50%] border-none cursor-pointer z-1"
         onClick={() => setToggle(!isToggled)}
       >
         {!isToggled ? (
-          <IoMenu size={30} className="text-black-100" />
+          <IoMenu size={30} className="text-[#282b2d]-100" />
         ) : (
           <IoCloseSharp size={30} />
         )}
@@ -44,7 +44,7 @@ export const NavButton = () => {
       <AnimatePresence>
         {isToggled && (
           <motion.div
-            className="pt-20 z-50 flex-col-reverse w-[250px] h-screen rounded-[16px] bg-gradient-to-t from-black to-slate-800"
+            className="pt-20 z-50 flex-col-reverse w-[250px] h-screen rounded-[16px] bg-gradient-to-t from-[#282b2d] to-slate-700"
             initial="hidden"
             animate={isToggled ? "visible" : "hidden"}
             exit="hidden"
