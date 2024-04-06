@@ -26,7 +26,7 @@ export const About = () => {
           transition={{ duration: 0.8 }}
         >
           <div>
-            <h1 className="text-2xl mb-2 lg:text-4xl lg:mb-5 text-secondary ">
+            <h1 className="text-2xl mb-2 lg:text-4xl lg:mb-5 text-secondary font-semibold">
               About us
             </h1>
           </div>
@@ -36,7 +36,7 @@ export const About = () => {
             expression.
           </p>
           <br></br>
-          <p>
+          <p className="mb-7 lg:mb-0">
             Whether it's timeless hairstyles or the latest color innovations,
             we're committed to creating tailor-made looks that mirror the
             individual preferences of every customer.

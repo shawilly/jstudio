@@ -28,21 +28,21 @@ export const NavLinks = () => {
   };
 
   return (
-    <div className="flex justify-start items-center">
+    <div className="flex justify-start items-center w-auto">
       <NavButton />
-      <div className="hidden lg:block pr-1 hover:text-yellow-400">
+      <div className="hidden lg:block lg:pr-1 hover:text-yellow-400">
         <Link
-          className="flex pl-[25px]"
+          className="flex lg:pl-[25px]"
           href=""
           onClick={() => handleSelect(NAV_LINKS.NONE)}
         >
           <MountainIcon className="w-8 h-8" />
-          <span className="ml-2 font-bold text-2xl min-w-[260px]">
+          <span className="ml-2 font-bold text-2xl lg:min-w-[260px]">
             Richmond Hair Studio
           </span>
         </Link>
       </div>
-      <div className="hidden lg:flex pl-[20px] justify-evenly items-center space-x-4 w-[60%]">
+      <div className="hidden lg:flex lg:pl-[20px] justify-evenly items-center space-x-4 w-[60%]">
         {Array.from(navLinks).map(([key, href]) => (
           <Link
             key={key}
@@ -56,9 +56,9 @@ export const NavLinks = () => {
           </Link>
         ))}
       </div>
-      <div className="hidden lg:flex pl-[60px] justify-right h-[50%]">
+      <div className="hidden lg:flex justify-right h-[50%]">
         <Button
-          className="text-primary h-[30px] w-[100px] hover:text-yellow-400"
+          className="text-primary lg:h-[30px] lg:w-[100px] hover:text-yellow-400"
           variant="outline"
         >
           <Link href="#/contact">Contact</Link>

@@ -24,17 +24,7 @@ const Reviews = () => {
       {Array.from(testimonials).map(([review, { name, score }], index) => (
         <div
           key={index}
-          className="
-                mt-8
-                bg-primary
-                rounded-lg
-                shadow-md
-                p-3
-                text-secondary
-                text-center
-                hover:drop-shadow-xl
-                bg-white
-                "
+          className="flex flex-col justify-between w-[75%] lg:basis-2/5 h-[80%] m-4 p-5 bg-primary rounded-lg shadow-md text-secondary text-center hover:drop-shadow-xl bg-white"
         >
           <p>
             &quot;<i>{review}</i>&quot;
@@ -60,9 +50,9 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="flex flex-col justify-center w-screen h-screen p-5 bg-purple-300"
+      className="flex flex-col justify-center w-screen h-full p-5 bg-purple-300"
     >
-      <h1 className="text-4xl text-secondary mt-12 w-full flex justify-center">
+      <h1 className="text-4xl text-secondary mt-12 mb-12 w-full flex justify-center font-semibold">
         What people have to say
       </h1>
       <Reviews />
