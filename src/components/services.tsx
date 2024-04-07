@@ -41,11 +41,16 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="flex flex-col justify-center w-full lg:h-screen p-5 bg-gradient-to-b from-white to-pink-100">
-      <h1 className="text-4xl text-secondary mt-12 pb-4 font-semibold">Services we offer</h1>
-      <div className=" bg-gray-100 w-full">
+    <section
+      id="services"
+      className="flex w-full flex-col justify-center bg-gradient-to-b from-[#f9f9f9] to-pink-100 p-5 lg:h-screen"
+    >
+      <h1 className="mt-12 pb-4 text-4xl font-semibold text-secondary">
+        Services we offer
+      </h1>
+      <div className=" w-full bg-gray-100">
         <div className="overflow-x-auto">
-          <Table className="md:mx-2 md:mt-4 md:mb-8 mx-8 mt-4 mb-8">
+          <Table className="mx-8 mb-8 mt-4 md:mx-2 md:mb-8 md:mt-4">
             <TableCaption className="text-sm italic text-gray-600">
               Our prices are very competitive. Please speak with one of our
               experts for a quote.

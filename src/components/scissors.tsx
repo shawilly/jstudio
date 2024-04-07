@@ -33,5 +33,5 @@ export const Scissors = dynamic(
 
       return <div className={styling}>{View}</div>;
     }),
-  { ssr: false }
+  { ssr: false },
 );

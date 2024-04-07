@@ -28,26 +28,26 @@ export const NavLinks = () => {
   };
 
   return (
-    <div className="flex justify-start items-center w-auto">
+    <div className="flex w-auto items-center justify-start">
       <NavButton />
-      <div className="hidden lg:block lg:pr-1 hover:text-yellow-400">
+      <div className="hidden hover:text-yellow-400 lg:block lg:pr-1">
         <Link
           className="flex lg:pl-[25px]"
           href=""
           onClick={() => handleSelect(NAV_LINKS.NONE)}
         >
-          <MountainIcon className="w-8 h-8" />
-          <span className="ml-2 font-bold text-2xl lg:min-w-[260px]">
+          <MountainIcon className="h-8 w-8" />
+          <span className="ml-2 text-2xl font-bold lg:min-w-[260px]">
             Richmond Hair Studio
           </span>
         </Link>
       </div>
-      <div className="hidden lg:flex lg:pl-[20px] justify-evenly items-center space-x-4 w-[60%]">
+      <div className="hidden w-[60%] items-center justify-evenly space-x-4 lg:flex lg:pl-[20px]">
         {Array.from(navLinks).map(([key, href]) => (
           <Link
             key={key}
             href={href}
-            className={`hover:text-yellow-400 transition ease-in-out delay-150 hover:scale-110 hover:drop-shadow-2xl duration-300 ${
+            className={`transition delay-150 duration-300 ease-in-out hover:scale-110 hover:text-yellow-400 hover:drop-shadow-2xl ${
               selected === key ? "text-yellow-400" : ""
             }`}
             onClick={() => handleSelect(key)}
@@ -56,12 +56,12 @@ export const NavLinks = () => {
           </Link>
         ))}
       </div>
-      <div className="hidden lg:flex justify-right h-[50%]">
+      <div className="justify-right hidden h-[50%] lg:flex">
         <Button
-          className="text-primary lg:h-[30px] lg:w-[100px] hover:text-yellow-400"
+          className="text-primary hover:text-yellow-400 lg:h-[30px] lg:w-[100px]"
           variant="outline"
         >
-          <Link href="#/contact">Contact</Link>
+          <Link href="#contact">Contact</Link>
         </Button>
       </div>
     </div>
@@ -69,7 +69,7 @@ export const NavLinks = () => {
 };
 
 function MountainIcon(
-  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>,
 ) {
   return (
     <svg

@@ -1,3 +1,4 @@
+import { NavBar } from "@/components/nav-bar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
@@ -5,7 +6,7 @@ import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans", 
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -19,11 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-screen w-screen">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          "bg-[#282b2d] font-sans text-[#282b2d] antialiased",
+          fontSans.variable,
         )}
       >
         {children}

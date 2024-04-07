@@ -29,9 +29,9 @@ export const NavButton = () => {
   };
 
   return (
-    <div className="lg:hidden fixed top-1 left-2">
+    <div className="fixed left-2 top-1 lg:hidden">
       <button
-        className="w-[40px] h-[40px] rounded-[50%] border-none cursor-pointer z-1"
+        className="z-1 h-[40px] w-[40px] cursor-pointer rounded-[50%] border-none"
         onClick={() => setToggle(!isToggled)}
       >
         {!isToggled ? (
@@ -44,7 +44,7 @@ export const NavButton = () => {
       <AnimatePresence>
         {isToggled && (
           <motion.div
-            className="pt-20 z-50 flex-col-reverse w-[250px] h-screen rounded-[16px] bg-gradient-to-t from-[#282b2d] to-slate-700"
+            className="z-50 h-screen w-[250px] flex-col-reverse rounded-[16px] bg-gradient-to-t from-[#282b2d] to-slate-700 pt-20"
             initial="hidden"
             animate={isToggled ? "visible" : "hidden"}
             exit="hidden"
@@ -106,7 +106,7 @@ const NavbarItems = ({
         exit="hidden"
         variants={navList}
       >
-        {[...Array.from(navLinks), ["Contact", ""]].map(
+        {[...Array.from(navLinks), ["Contact", "#contact"]].map(
           ([label, href], index) => (
             <motion.li key={index} variants={navItem}>
               <Link href={href} className="">
@@ -114,13 +114,13 @@ const NavbarItems = ({
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   onClick={() => setToggle(false)}
-                  className="text-white font-bold cursor-pointer text-40 pl-[30%] pt-2"
+                  className="text-40 cursor-pointer pl-[30%] pt-2 font-bold text-[#f9f9f9]"
                 >
                   {label}
                 </motion.button>
               </Link>
             </motion.li>
-          )
+          ),
         )}
       </motion.ul>
     </>

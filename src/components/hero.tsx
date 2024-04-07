@@ -89,7 +89,7 @@ const Title = () => (
 
 const SocialButtons = () => (
   <motion.div
-    className="flex-row flex items-stretch justify-center space-x-4"
+    className="flex flex-row items-stretch justify-center space-x-4"
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
@@ -99,7 +99,7 @@ const SocialButtons = () => (
         <div className={className} key={label}>
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <Link key={label} href={href}>
-              <Icon className="w-10 h-10 sm:w-14 sm:h-14 lg:w-16 lg:h-16" />
+              <Icon className="h-10 w-10 sm:h-14 sm:w-14 lg:h-16 lg:w-16" />
             </Link>
           </motion.button>
         </div>
@@ -110,7 +110,7 @@ const SocialButtons = () => (
 
 export const Hero = () => {
   return (
-    <section className="relative items-center bg-gradient-to-b from-purple-200 to-pink-100 bg-opacity-1 flex justify-center flex-col lg:flex-row lg:justify-between  mt-[30px] lg:mt-0 h-screen w-[100%] sm:mx-auto p-5">
+    <section className="bg-opacity-1 relative mt-[30px] flex h-screen w-[100%] flex-col items-center justify-center bg-gradient-to-b from-purple-200  to-pink-100 p-5 sm:mx-auto lg:mt-0 lg:flex-row lg:justify-between">
       <div className="order-0">
         <Title />
       </div>

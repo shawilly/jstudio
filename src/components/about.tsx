@@ -13,20 +13,20 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="flex w-full h-screen p-2 lg:p-5 font-sans justify-center bg-gradient-to-b from-pink-100 to-white"
+      className="flex h-screen w-full justify-center bg-gradient-to-b from-pink-100 to-[#f9f9f9] p-2 font-sans lg:p-5"
     >
-      <div className="flex flex-col-reverse lg:flex-row-reverse lg:justify-between items-center">
-        <div className="justify-center lg:justify-normal lg:w-1/2 lg:mr-8 lg:order-1">
+      <div className="flex flex-col-reverse items-center lg:flex-row-reverse lg:justify-between">
+        <div className="justify-center lg:order-1 lg:mr-8 lg:w-1/2 lg:justify-normal">
           {View}
         </div>
         <motion.div
-          className="w-[100%] lg:w-[40%] max-h-[30%] lg:pr-8"
+          className="max-h-[30%] w-[100%] lg:w-[40%] lg:pr-8"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
           <div>
-            <h1 className="text-2xl mb-2 lg:text-4xl lg:mb-5 text-secondary font-semibold">
+            <h1 className="mb-2 text-2xl font-semibold text-secondary lg:mb-5 lg:text-4xl">
               About us
             </h1>
           </div>

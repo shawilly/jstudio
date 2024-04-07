@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export enum STD_SIZE {
-  MOBILE = "(max-width: 800px)",
+  MOBILE = "(max-width: 768px)",
   TABLET = "(max-width: 1150px)",
 }
 

@@ -8,18 +8,20 @@ export const Products = () => {
   return (
     <section
       id="products"
-      className="flex flex-col lg:flex-row justify-center items-center h-screen w-screen bg-gradient-to-b from-pink-100 to-purple-300 gap-5 lg:gap-6 lg:pr-10"
+      className="flex h-screen w-screen flex-col items-center justify-center gap-5 bg-gradient-to-b from-pink-100 to-purple-300 lg:flex-row lg:gap-6 lg:pr-10"
     >
-      <div className="relative flex justify-start pl-5 items-center h-1/5 basis-1/6 lg:basis-1/2">
-        <h1 className="text-4xl font-semibold">Products we like, use, and recommend</h1>
+      <div className="relative flex h-1/5 basis-1/6 items-center justify-start pl-5 lg:basis-1/2">
+        <h1 className="text-4xl font-semibold">
+          Products we like, use, and recommend
+        </h1>
       </div>
       <motion.div
-        className="bg-slate-100 h-1/5 w-4/5 lg:basis-2/5 rounded-l-xl rounded-r-xl drop-shadow-2xl"
+        className="h-1/5 w-4/5 rounded-l-xl rounded-r-xl bg-slate-100 drop-shadow-2xl lg:basis-2/5"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="flex justify-center items-center h-full w-full">
+        <div className="flex h-full w-full items-center justify-center">
           <motion.button
             className="absolute"
             whileHover={{ scale: 1.1 }}
@@ -42,12 +44,12 @@ export const Products = () => {
         </div>
       </motion.div>
       <motion.div
-        className="bg-slate-100 h-1/5 w-4/5 lg:basis-2/5 rounded-l-xl rounded-r-xl drop-shadow-2xl"
+        className="h-1/5 w-4/5 rounded-l-xl rounded-r-xl bg-slate-100 drop-shadow-2xl lg:basis-2/5"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
       >
-        <div className="flex justify-center items-center h-full w-full">
+        <div className="flex h-full w-full items-center justify-center">
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <a
               target="_blank"
