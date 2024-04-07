@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FormInput } from "lucide-react";
 import React, { useRef, useState } from "react";
 import { config } from "../lib/config";
+import { Map } from "./map";
 
 interface FormInput {
   name: string;
@@ -16,8 +17,6 @@ enum FORM_ELEMENTS {
   INPUT = "input",
   TEXTAREA = "textarea",
 }
-
-const { emailJs, googleMapsApiKey } = config;
 
 const nullForm: FormInput = {
   name: "",
@@ -55,7 +54,7 @@ export const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    const { service, template, options } = emailJs();
+    const { service, template, options } = config.emailJs();
 
     try {
       await emailjs.send(
@@ -149,6 +148,7 @@ export const Contact = () => {
           </form>
         </motion.div>
       </div>
+      <Map />
     </section>
   );
 };

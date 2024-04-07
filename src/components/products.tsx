@@ -35,7 +35,6 @@ export const Products = () => {
               <Image
                 src={joicoLogo as StaticImageData}
                 alt="Joico Logo"
-                layout="fixed"
                 width={200}
                 height={200}
               />
@@ -59,7 +58,6 @@ export const Products = () => {
               <Image
                 src={bainDeTerreLogo as StaticImageData}
                 alt="Bain De Terre Logo"
-                layout="fixed"
                 width={200}
                 height={200}
               />
