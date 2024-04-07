@@ -16,6 +16,7 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "env-var": "^7.4.1",
     "framer-motion": "^11.0.24",
     "google-map-react": "^2.2.1",
     "lottie-react": "^2.4.0",

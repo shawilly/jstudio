@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { FormInput } from "lucide-react";
 import React, { useRef, useState } from "react";
+import { config } from "../lib/config";
 
 interface FormInput {
   name: string;
@@ -15,6 +16,8 @@ enum FORM_ELEMENTS {
   INPUT = "input",
   TEXTAREA = "textarea",
 }
+
+const { emailJs, googleMapsApiKey } = config;
 
 const nullForm: FormInput = {
   name: "",
@@ -51,17 +54,20 @@ export const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+
+    const { service, template, options } = emailJs();
+
     try {
       await emailjs.send(
-        "service_qq39z0k",
-        "template_sra5pym",
+        service,
+        template,
         {
           ...contact,
           from_name: form.name,
           from_email: form.email,
           message: form.message,
         },
-        "2IvTkCMuCOiYXPDH5",
+        options,
       );
       setLoading(false);
       alert("Thank you. I will get back to you as soon as possible");
