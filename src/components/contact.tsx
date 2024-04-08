@@ -28,7 +28,7 @@ export const Contact = () => {
         <div className="flex h-1/5 w-[100%] flex-row items-center justify-center pt-10 font-semibold text-[#282b2d]">
           <p>
             Open Monday to Sunday by appointment
-            <br></br>
+            <br />
             <Link href={`tel:+${phone_number.number}`}>
               <span className="hover:scale-200 underline transition delay-150 duration-300 ease-in-out hover:text-pink-500">
                 Feel free to text or call us{"   "}

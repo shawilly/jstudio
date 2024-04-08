@@ -47,7 +47,7 @@ export const About = () => {
             experience and a shared love for hair design as an artistic
             expression.
           </p>
-          <br></br>
+          <br />
           <p className="mb-7 lg:mb-0">
             Whether it's timeless hairstyles or the latest color innovations,
             we're committed to creating tailor-made looks that mirror the

@@ -10,7 +10,7 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <div className="relative z-0 h-full w-full">
+    <div className="relative z-0 h-full w-full overflow-hidden">
       <NavBar />
       <Suspense fallback={<LoadingScreen />}>
         <Hero />
