@@ -87,7 +87,7 @@ const Title = () => (
   </h1>
 );
 
-const SocialButtons = () => (
+export const SocialButtons = () => (
   <motion.div
     className="flex flex-row items-stretch justify-center space-x-4"
     initial={{ opacity: 0, scale: 0.5 }}
@@ -110,7 +110,21 @@ const SocialButtons = () => (
 
 export const Hero = () => {
   return (
-    <section className="bg-opacity-1 relative mt-[30px] flex h-screen w-[100%] flex-col items-center justify-center bg-gradient-to-b from-purple-200  to-pink-100 p-5 sm:mx-auto lg:mt-0 lg:flex-row lg:justify-between">
+    <motion.section
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0,
+            delayChildren: 0,
+          },
+        },
+      }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
+      className="bg-opacity-1 relative mt-[30px] flex h-screen w-[100%] flex-col items-center justify-center bg-gradient-to-b from-purple-200  to-pink-100 p-5 sm:mx-auto lg:mt-0 lg:flex-row lg:justify-between"
+    >
       <div className="order-0">
         <Title />
       </div>
@@ -118,6 +132,6 @@ export const Hero = () => {
       <div className="mb-[25px] mt-[100px] lg:mt-5">
         <SocialButtons />
       </div>
-    </section>
+    </motion.section>
   );
 };

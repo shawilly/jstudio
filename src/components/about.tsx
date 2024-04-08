@@ -11,8 +11,20 @@ export const About = () => {
   });
 
   return (
-    <section
+    <motion.section
       id="about"
+      variants={{
+        hidden: {},
+        show: {
+          transition: {
+            staggerChildren: 0,
+            delayChildren: 0,
+          },
+        },
+      }}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.25 }}
       className="flex h-screen w-full justify-center bg-gradient-to-b from-pink-100 to-[#f9f9f9] p-2 font-sans lg:p-5"
     >
       <div className="flex flex-col-reverse items-center lg:flex-row-reverse lg:justify-between">
@@ -43,6 +55,6 @@ export const About = () => {
           </p>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };

@@ -24,7 +24,7 @@ const Reviews = () => {
       {Array.from(testimonials).map(([review, { name, score }], index) => (
         <div
           key={index}
-          className="m-4 flex h-[80%] w-[75%] flex-col justify-between rounded-lg bg-[#f9f9f9] bg-primary p-5 text-center text-secondary shadow-md hover:drop-shadow-xl lg:basis-2/5"
+          className="lg:w-min-[30%] m-4 flex h-[80%] w-[75%] flex-col justify-between rounded-lg bg-[#f9f9f9] p-5 text-center text-secondary shadow-md hover:drop-shadow-xl lg:h-auto"
         >
           <p>
             &quot;<i>{review}</i>&quot;
@@ -50,7 +50,7 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="flex h-full w-screen flex-col justify-center bg-purple-300 p-5"
+      className="flex h-full w-screen flex-col justify-center bg-purple-300 p-5 lg:h-screen"
     >
       <h1 className="mb-12 mt-12 flex w-full justify-center text-4xl font-semibold text-secondary">
         What people have to say
