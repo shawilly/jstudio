@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Richmond Hair Studio Web App
 
-## Getting Started
+This is a single-page web application built for Richmond Hair Studio, located in Ottawa, Canada. The app was developed using Next.js, Tailwind CSS, Node.js, and TypeScript.
 
-First, run the development server:
+## Features
+- **Responsive Design**: Ensures seamless user experience across devices.
+- **Dynamic Routing**: Utilizes Next.js for efficient client-side routing.
+- **Custom Styling**: Styled with Tailwind CSS for modern and sleek UI.
+- **Server-side Rendering**: Provides fast loading times and improved SEO.
+- **Type Safety**: Implemented using TypeScript for robust and scalable codebase.
+- **Node.js Backend**: Utilizes Node.js for server-side logic and API integration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Technologies Used
+- Next.js
+- Tailwind CSS
+- Node.js
+- TypeScript
+- Next third party libraries - specifically embedding of google maps
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+1. Clone the repository: `git clone <repository-url>`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+1. Access the web app through the provided URL.
+2. Navigate through different sections and features.
+3. Enjoy a seamless experience browsing Richmond Hair Studio's services and offerings.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributors
+- [Shane Williams](https://github.com/shawilly)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to expand use this as template to include specific functionalities and details about the web application.
