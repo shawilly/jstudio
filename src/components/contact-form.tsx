@@ -120,7 +120,10 @@ export const ContactForm = () => {
       transition={{ duration: 0.8 }}
       className="h-[60%] flex-[0.75] bg-gradient-to-b from-[#282b2d] to-purple-900 p-8 lg:h-[80%]"
     >
-      <h1 className="m-0 lg:mb-10 text-3xl font-bold"><span className="lg:hidden">Or b</span><span className="hidden lg:inline">B</span>ook with us.</h1>
+      <h1 className="m-0 text-3xl font-bold lg:mb-10">
+        <span className="lg:hidden">Or b</span>
+        <span className="hidden lg:inline">B</span>ook with us.
+      </h1>
       <form
         ref={formRef}
         onSubmit={handleSubmit}
