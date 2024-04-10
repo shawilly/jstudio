@@ -8,36 +8,34 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const services = [
-  {
-    service: "Cut and Style",
-    cost: "$40",
-  },
-  {
-    service: "Basic Men's Cut",
-    cost: "$30",
-  },
-  {
-    service: "Wash and Blow Dry",
-    cost: "$20",
-  },
-  {
-    service: "Color and Style",
-    cost: "$80",
-  },
-  {
-    service: "Highlights and Foil",
-    cost: "$120",
-  },
-  {
-    service: "Children's Cut",
-    cost: "$25",
-  },
-  {
-    service: "Texture/Wave",
-    cost: "Contact us for details.",
-  },
-];
+interface Service {
+  service: string;
+  cost: string;
+}
+
+const standardServices: Record<string, Service[]> = {
+  standard: [
+    { service: "Wash, cut, & style", cost: "" },
+    { service: "Wash & blow dry", cost: "" },
+    { service: "Formal hair style", cost: "" },
+    { service: "Up do", cost: "" },
+  ],
+  colorAndHighlights: [
+    { service: "Root touch up", cost: "" },
+    { service: "Cut & colour", cost: "" },
+    { service: "Cut & colour (long hair)", cost: "" },
+    { service: "Partial highlights", cost: "" },
+    { service: "Cut & partial highlights", cost: "" },
+    { service: "Full highlights", cost: "" },
+    { service: "Toner, hair colour refresh, gloss treatment", cost: "" },
+    { service: "Balayage, ombre, full head bleach, ", cost: "" },
+    { service: "", cost: "" },
+    { service: "", cost: "" },
+    { service: "", cost: "" },
+    { service: "", cost: "" },
+    { service: "", cost: "" },
+  ],
+};
 
 export const Services = () => {
   return (

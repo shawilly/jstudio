@@ -16,7 +16,7 @@ export const Contact = () => {
         <ContactForm />
       </div>
       <div className="relative flex flex-col items-center">
-        <div className="ml-5 h-[350px] overflow-hidden rounded-l-2xl xl:w-max-1/2 rounded-r-2xl border-[2px] border-pink-200 bg-pink-300 xl:border-[5px]">
+        <div className="xl:w-max-1/2 ml-5 h-[350px] overflow-hidden rounded-l-2xl rounded-r-2xl border-[2px] border-pink-200 bg-pink-300 xl:border-[5px]">
           <GoogleMapsEmbed
             apiKey={apiKey}
             mode="place"
