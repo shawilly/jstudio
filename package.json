@@ -18,6 +18,8 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.4",
     "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "ag-grid-community": "^31.2.1",
+    "ag-grid-react": "^31.2.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "env-var": "^7.4.1",

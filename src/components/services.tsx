@@ -1,43 +1,49 @@
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-
-interface Service {
-  service: string;
-  cost: string;
-}
-
-const standardServices: Record<string, Service[]> = {
-  standard: [
-    { service: "Wash, cut, & style", cost: "" },
-    { service: "Wash & blow dry", cost: "" },
-    { service: "Formal hair style", cost: "" },
-    { service: "Up do", cost: "" },
-  ],
-  colorAndHighlights: [
-    { service: "Root touch up", cost: "" },
-    { service: "Cut & colour", cost: "" },
-    { service: "Cut & colour (long hair)", cost: "" },
-    { service: "Partial highlights", cost: "" },
-    { service: "Cut & partial highlights", cost: "" },
-    { service: "Full highlights", cost: "" },
-    { service: "Toner, hair colour refresh, gloss treatment", cost: "" },
-    { service: "Balayage, ombre, full head bleach, ", cost: "" },
-    { service: "", cost: "" },
-    { service: "", cost: "" },
-    { service: "", cost: "" },
-    { service: "", cost: "" },
-    { service: "", cost: "" },
-  ],
-};
+"use client";
+import { AgGridReact } from "ag-grid-react";
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-quartz.css";
+import { useState } from "react";
 
 export const Services = () => {
+  const [serviceRows, _setServiceRows] = useState([
+    { service: "Wash, cut, & style", cost: 53 },
+    { service: "Wash & blow dry", cost: 35 },
+    { service: "Formal hair style", cost: 45 },
+    { service: "Up do", cost: 45 },
+    { service: "Men's cut & wash", cost: 30 },
+    { service: "Boy's cut", cost: 25 },
+    { service: "Girl's cut", cost: 30 },
+    { service: "Perm and cut", cost: 140 },
+    { service: "Root touch up", cost: 85 },
+    { service: "Cut & colour", cost: 110 },
+    { service: "Cut & colour (long hair)", cost: 120 },
+    { service: "Partial highlights", cost: 125 },
+    { service: "Cut & partial highlights", cost: 155 },
+    { service: "Full highlights", cost: 165 },
+    { service: "Toner", cost: 10 },
+    { service: "Hair colour refresher", cost: 10 },
+    { service: "Gloss treatment", cost: 10 },
+    { service: "Balayage" },
+    { service: "Ombre" },
+    { service: "Full head bleach" },
+    { service: "Special effects" },
+    { service: "Colour & colour correction" },
+  ]);
+
+  // Disabling any because type inference of the columns is difficult with the transformation of header and value
+  // Native ts support is unclear in these instances
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [serviceCols, _setServiceCols] = useState<any>([
+    { field: "service", flex: 1 },
+    {
+      headerName: "Cost (starting from)",
+      valueGetter: (s: Record<string, Record<string, number>>) =>
+        s.data.cost ? `$${s.data.cost}.00 CAD` : "Price by consultation",
+      field: "cost",
+      flex: 1,
+    },
+  ]);
+
   return (
     <section
       id="services"
@@ -46,36 +52,8 @@ export const Services = () => {
       <h1 className="mt-12 pb-4 text-4xl font-semibold text-secondary">
         Services we offer
       </h1>
-      <div className=" w-full bg-gray-100">
-        <div className="overflow-x-auto">
-          <Table className="mx-8 mb-8 mt-4 md:mx-2 md:mb-8 md:mt-4">
-            <TableCaption className="text-sm italic text-gray-600">
-              Our prices are very competitive. Please speak with one of our
-              experts for a quote.
-            </TableCaption>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="font-semibold text-secondary">
-                  Service
-                </TableHead>
-                <TableHead className="font-semibold text-secondary">
-                  Cost (starting at)
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {services.map(({ service, cost }, index) => (
-                <TableRow
-                  key={index}
-                  className={index % 2 === 0 ? "bg-gray-200" : ""}
-                >
-                  <TableCell className="py-2 font-medium">{service}</TableCell>
-                  <TableCell className="py-2">{cost}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </div>
+      <div className="ag-theme-quartz" style={{ height: 500 }}>
+        <AgGridReact rowData={serviceRows} columnDefs={serviceCols} />
       </div>
     </section>
   );
