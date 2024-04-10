@@ -29,6 +29,8 @@ export const Scissors = dynamic(
         }, 800);
 
         return () => clearInterval(interval);
+        // We only want to change this when playing changes
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [playing]);
 
       return <div className={styling}>{View}</div>;

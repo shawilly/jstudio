@@ -49,9 +49,9 @@ export const About = () => {
           </p>
           <br />
           <p className="mb-7 lg:mb-0">
-            Whether it's timeless hairstyles or the latest color innovations,
-            we're committed to creating tailor-made looks that mirror the
-            individual preferences of every customer.
+            Whether it&lsquo;s timeless hairstyles or the latest color
+            innovations, we&lsquo;re committed to creating tailor-made looks
+            that mirror the individual preferences of every customer.
           </p>
         </motion.div>
       </div>
